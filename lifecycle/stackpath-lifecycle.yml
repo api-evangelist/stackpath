@@ -1,0 +1,79 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  Public reporting of StackPath's wind-down (streamingmediablog.com, sdxcentral.com,
+  datacenterdynamics.com, edgeir.com, hostingjournalist.com), the Wikipedia article on
+  StackPath, and direct DNS/HTTP probes of every StackPath host on 2026-08-29.
+status: terminated
+note: >-
+  StackPath published no versioning policy, deprecation policy, Sunset/Deprecation
+  header commitment or SLA that survives on any reachable host. What is recorded here
+  is the terminal event: the platform was shut down and the company dissolved. No
+  status page exists (status.stackpath.com has no DNS), so no StatusPage pointer is
+  emitted.
+versioning:
+  scheme: path-segment
+  note: >-
+    Historically every StackPath API path began with a service name and a version
+    segment (for example /cdn/v1/, /identity/v1/), documented at
+    stackpath.dev/docs/stackpath-api-versioning. That host is now a domain-for-sale
+    parking page (redirects to domains.atom.com), so the policy is no longer published.
+  evidence:
+  - url: https://stackpath.dev/
+    status: 403
+    note: redirects to https://domains.atom.com/lpd/name/stackpath.dev (domain for sale)
+timeline:
+- date: '2015'
+  event: StackPath founded in Dallas, Texas by Lance Crosby, co-founder of SoftLayer.
+- date: '2023'
+  event: >-
+    StackPath exits the CDN business; Akamai acquires approximately 100 enterprise CDN
+    contracts.
+- date: '2024-03'
+  event: >-
+    StackPath sells its web application and API protection (WAAP) assets to Gcore.
+- date: '2024-05-20'
+  event: Last first-party npm publish - @stackpath/pulumi-stackpath 0.2.0.
+- date: '2024-06-07'
+  event: >-
+    Last first-party release of any kind - Terraform provider stackpath/stackpath
+    v2.1.0 on registry.terraform.io.
+- date: '2024-06-12'
+  event: >-
+    StackPath announces it is ceasing operations and liquidating its remaining assets.
+- date: '2024-06-14'
+  event: >-
+    Customers emailed notice of immediate decommissioning of all remaining services -
+    edge compute, DNS, object storage, network transit, colocation and monitoring.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  note: >-
+    No deprecation policy is reachable. Service termination was announced by email with
+    immediate effect rather than through a published deprecation window.
+status_page:
+  published: false
+  evidence:
+  - url: https://status.stackpath.com/
+    status: 000
+    note: no DNS record
+host_liveness:
+  checked: '2026-08-29'
+  probes:
+  - url: https://www.stackpath.com/
+    status: 200
+    note: >-
+      HTTP 200 but the body is an empty black placeholder page (835 bytes, no links, no
+      text), served from Azure Static Web Apps, last-modified 2025-02-10.
+  - url: https://developer.stackpath.com/
+    status: 000
+    note: no DNS record
+  - url: https://docs.stackpath.com/
+    status: 000
+    note: no DNS record
+  - url: https://gateway.stackpath.com/
+    status: 000
+    note: no DNS record
+  - url: https://api.github.com/orgs/stackpath
+    status: 404
+    note: the github.com/stackpath organization has been deleted

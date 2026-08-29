@@ -1,0 +1,29 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  npm registry metadata for @stackpath/serverless-scripting-cli (maintainer
+  "stackpath-admin"). StackPath's own CLI documentation is unreachable -
+  docs.stackpath.com and developer.stackpath.com have no DNS.
+status: abandoned
+note: >-
+  The only first-party StackPath command-line tool still discoverable is the serverless
+  scripting deploy CLI on npm, last published 2020-04-27. Its declared source
+  repository (github.com/stackpath/serverless-scripting-cli) returns 404 because the
+  GitHub organization was deleted, and the platform it deploys to no longer exists.
+  The command surface is not documented on any reachable page, so no command list is
+  recorded here rather than one being invented.
+clis:
+- name: StackPath Serverless Scripting CLI
+  package: '@stackpath/serverless-scripting-cli'
+  registry: npm
+  version: 2.1.1
+  published: '2020-04-27'
+  install:
+  - method: npm
+    command: npm install -g @stackpath/serverless-scripting-cli
+  license: MIT
+  purpose: Deploy to StackPath's serverless scripting platform from a local machine.
+  commands: []
+  commands_note: >-
+    Not recorded - the CLI reference lived on docs.stackpath.com, which no longer
+    resolves, and no command list was fabricated from the package description.

@@ -1,0 +1,21 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  Attempted retrieval of StackPath pricing on 2026-08-29. www.stackpath.com/pricing and
+  every historical pricing surface are gone: the apex and www hosts serve a single empty
+  placeholder page and every other StackPath host has been withdrawn from DNS.
+plan_count: 0
+note: >-
+  StackPath ceased operations in June 2024 and sells nothing. No pricing page, plan
+  table, quota, overage schedule or machine-readable price catalog is published on any
+  reachable StackPath host. This is a terminal zero, not an undocumented one.
+plans: []
+evidence:
+- url: https://www.stackpath.com/pricing
+  status: 404
+- url: https://www.stackpath.com/
+  status: 200
+  note: empty placeholder page, no navigation or pricing content
+- url: https://docs.stackpath.com/
+  status: 000
+  note: no DNS record

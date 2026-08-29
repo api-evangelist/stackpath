@@ -1,0 +1,65 @@
+generated: '2026-08-29'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS probes on 2026-08-29 of every StackPath host still
+  resolving in DNS. The historical API and developer hosts (api.stackpath.com,
+  gateway.stackpath.com, developer.stackpath.com, docs.stackpath.com,
+  control.stackpath.com, status.stackpath.com) no longer resolve at all and could
+  not be probed.
+note: >-
+  Every path returned HTTP 404 from the parked placeholder now served on the apex and
+  www hosts, so no WellKnown or SecurityTxt pointer is emitted. This file records the
+  absence, not a surface.
+hosts:
+- host: www.stackpath.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+- host: stackpath.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+unresolvable_hosts:
+- host: api.stackpath.com
+  reason: no DNS record
+- host: gateway.stackpath.com
+  reason: no DNS record
+- host: developer.stackpath.com
+  reason: no DNS record
+- host: docs.stackpath.com
+  reason: no DNS record
+- host: control.stackpath.com
+  reason: no DNS record
+- host: status.stackpath.com
+  reason: no DNS record
+- host: support.stackpath.com
+  reason: no DNS record

@@ -1,0 +1,26 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  Attempted retrieval of StackPath API rate-limit documentation on 2026-08-29. The
+  developer portal (developer.stackpath.com), docs host (docs.stackpath.com) and API
+  gateway (gateway.stackpath.com) have all been withdrawn from DNS, so no published
+  limits, response headers or exhaustion status codes could be read, and none could be
+  observed live because there is no live endpoint to call.
+limit_count: 0
+note: >-
+  Not "StackPath documented no limits" - StackPath documents nothing at all any more.
+  No rate-limit numbers, no X-RateLimit-*/RateLimit-* header contract and no 429
+  behaviour are recoverable from any reachable first-party surface, and none were
+  inferred.
+limits: []
+headers: []
+evidence:
+- url: https://developer.stackpath.com/docs/en/getting-started/
+  status: 000
+  note: no DNS record
+- url: https://gateway.stackpath.com/
+  status: 000
+  note: no DNS record
+- url: https://stackpath.dev/docs/stackpath-api-versioning
+  status: 403
+  note: host now redirects to a domain-for-sale parking page

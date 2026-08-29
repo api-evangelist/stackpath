@@ -1,0 +1,126 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  npmjs.org registry metadata for the first-party @stackpath npm scope (maintainer
+  "stackpath-admin"), plus registry.terraform.io/v1/providers/stackpath/stackpath.
+  StackPath's own developer portal, docs host and GitHub organization are all gone
+  (developer.stackpath.com / docs.stackpath.com have no DNS; github.com/stackpath
+  returns HTTP 404), so the package registries are the only surviving first-party
+  distribution surface.
+note: >-
+  StackPath ceased operations in June 2024 and was dissolved; every package below is
+  abandoned. The versions and dates are recorded as structured fields because they are
+  the clearest published evidence of that: the newest first-party artifact of any kind
+  is the Terraform provider v2.1.0 (2024-06-07), five days before the company announced
+  it was winding down, and the client-side libraries stopped in 2021. Every package's
+  declared source repository now 404s because the github.com/stackpath organization
+  was deleted.
+official_count: 7
+packages:
+- name: '@stackpath/pulumi-stackpath'
+  registry: npm
+  official: true
+  language: TypeScript
+  kind: infrastructure-provider
+  version: 0.2.0
+  published: '2024-05-20'
+  url: https://www.npmjs.com/package/@stackpath/pulumi-stackpath
+  repository: https://github.com/stackpath/pulumi-stackpath
+  repository_status: 404
+  license: Apache-2.0
+  description: Pulumi package for creating and managing StackPath cloud resources.
+- name: stackpath/stackpath
+  registry: terraform
+  official: true
+  language: Go
+  kind: infrastructure-provider
+  version: 2.1.0
+  published: '2024-06-07'
+  url: https://registry.terraform.io/providers/stackpath/stackpath/latest
+  repository: https://github.com/stackpath/terraform-provider-stackpath
+  repository_status: 404
+  note: >-
+    Registry tier "partner", 47,957 downloads, eight published versions (1.3.2 through
+    2.1.0). The registry entry survives; its source repository does not.
+- name: '@stackpath/serverless-scripting-cli'
+  registry: npm
+  official: true
+  language: JavaScript
+  kind: cli
+  version: 2.1.1
+  published: '2020-04-27'
+  url: https://www.npmjs.com/package/@stackpath/serverless-scripting-cli
+  repository: https://github.com/stackpath/serverless-scripting-cli
+  repository_status: 404
+  license: MIT
+  description: Deploy to StackPath's serverless scripting platform from a local machine.
+- name: '@stackpath/cosmos-web-components'
+  registry: npm
+  official: true
+  language: JavaScript
+  kind: ui-components
+  version: 0.0.5
+  published: '2021-05-19'
+  url: https://www.npmjs.com/package/@stackpath/cosmos-web-components
+  license: MIT
+  description: Web Component library for StackPath's Cosmos Design System.
+- name: '@stackpath/cosmos-react-components'
+  registry: npm
+  official: true
+  language: JavaScript
+  kind: ui-components
+  version: 0.0.3
+  published: '2021-05-19'
+  url: https://www.npmjs.com/package/@stackpath/cosmos-react-components
+  description: React wrappers for the Cosmos Web Components.
+- name: '@stackpath/cosmos-design-tokens'
+  registry: npm
+  official: true
+  language: JavaScript
+  kind: design-tokens
+  version: 1.1.0
+  published: '2021-06-07'
+  url: https://www.npmjs.com/package/@stackpath/cosmos-design-tokens
+  license: ISC
+  description: Design tokens and helper utilities for the Cosmos Design System.
+- name: '@stackpath/node-grpc-error-details'
+  registry: npm
+  official: true
+  language: JavaScript
+  kind: utility
+  version: 1.1.3
+  published: '2021-06-29'
+  url: https://www.npmjs.com/package/@stackpath/node-grpc-error-details
+  license: MIT
+  description: Utility for deserializing grpc-status-details-bin.
+third_party_noted:
+- name: stackpath
+  registry: npm
+  official: false
+  version: 0.0.5
+  published: '2017-03-08'
+  url: https://www.npmjs.com/package/stackpath
+  note: Community Node client (geoffdutton/node-stackpath); not published by StackPath.
+- name: stackpath
+  registry: pypi
+  official: false
+  version: 0.0.1
+  published: null
+  url: https://pypi.org/project/stackpath/
+  note: >-
+    Community fork of python-maxcdn by an individual author (koty/python-stackpath).
+    PyPI serves a single 0.0.1 release with no dated upload recorded here; not
+    published by StackPath.
+- name: gitlab.com/kraney/stackpath
+  registry: go
+  official: false
+  version: null
+  published: null
+  url: https://github.com/kraney/stackpath
+  note: >-
+    Third-party Go SDK generated with OpenAPI Generator from StackPath's per-service
+    OpenAPI definitions. The repository mirrors eleven StackPath OpenAPI documents
+    (cdn, waf, dns, ssl, sites, edge_compute, edge_compute_networking, object_storage,
+    monitoring, stacks, accounts_and_users). NOT saved into openapi/ here: the pipeline
+    requires a contract be served by a host the company controls, and StackPath serves
+    none — these are a third-party mirror of a withdrawn contract, not a published one.
