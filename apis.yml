@@ -6,6 +6,19 @@ x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-08-29'
 modified: '2026-08-29'
