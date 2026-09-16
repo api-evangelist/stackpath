@@ -1,6 +1,14 @@
 aid: stackpath
 name: StackPath
-description: 'StackPath was an American edge computing platform provider headquartered in Dallas, Texas, founded in 2015 by SoftLayer co-founder Lance Crosby. It sold CDN, WAF/WAAP, DNS, SSL, object storage, edge compute (containers and VMs), serverless scripting and monitoring as a single edge platform, driven by a public REST API at gateway.stackpath.com with OAuth2 client-credentials auth and per-service OpenAPI definitions. The company exited the CDN business in 2023 (roughly 100 enterprise CDN contracts went to Akamai), sold its web application and API protection assets to Gcore in March 2024, then announced in June 2024 that it was ceasing operations and liquidating its remaining assets. All StackPath API, developer-portal, control-panel and status hosts have since been withdrawn from DNS and the company no longer publishes any machine-readable API contract.'
+description: StackPath was an American edge computing platform provider headquartered in Dallas, Texas,
+  founded in 2015 by SoftLayer co-founder Lance Crosby. It sold CDN, WAF/WAAP, DNS, SSL, object storage,
+  edge compute (containers and VMs), serverless scripting and monitoring as a single edge platform, driven
+  by a public REST API at gateway.stackpath.com with OAuth2 client-credentials auth and per-service OpenAPI
+  definitions. The company exited the CDN business in 2023 (roughly 100 enterprise CDN contracts went
+  to Akamai), sold its web application and API protection assets to Gcore in March 2024, then announced
+  in June 2024 that it was ceasing operations and liquidating its remaining assets. All StackPath API,
+  developer-portal, control-panel and status hosts have since been withdrawn from DNS and the company
+  no longer publishes any machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/stackpath/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -21,7 +29,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-08-29'
-modified: '2026-08-29'
+modified: '2026-09-15'
 tags:
 - Company
 - Edge Computing
@@ -64,18 +72,17 @@ x-enrichment:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    StackPath ceased operations in June 2024 and was dissolved; every API and developer
-    host - api., gateway., developer., docs., control. and status.stackpath.com - has
-    been withdrawn from DNS, the github.com/stackpath organization returns 404, and
-    www.stackpath.com serves an 835-byte empty black placeholder page.
+  detail: StackPath ceased operations in June 2024 and was dissolved; every API and developer host - api.,
+    gateway., developer., docs., control. and status.stackpath.com - has been withdrawn from DNS, the
+    github.com/stackpath organization returns 404, and www.stackpath.com serves an 835-byte empty black
+    placeholder page.
   evidence:
   - url: https://www.stackpath.com/
     status: 200
   - url: https://developer.stackpath.com/docs/en/getting-started/
-    status: 000
+    status: 0
   - url: https://gateway.stackpath.com/
-    status: 000
+    status: 0
   - url: https://api.github.com/orgs/stackpath
     status: 404
   - url: https://www.stackpath.com/.well-known/security.txt
@@ -83,3 +90,4 @@ x-coverage:
   - url: https://www.stackpath.com/llms.txt
     status: 404
   checked: '2026-08-29'
+x-status: defunct
