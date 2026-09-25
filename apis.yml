@@ -55,6 +55,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VendorFacets
+  url: vendor-facets/stackpath-vendor-facets.yml
 - type: Website
   url: https://www.stackpath.com/
 - type: DomainSecurity

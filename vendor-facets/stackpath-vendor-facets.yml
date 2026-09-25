@@ -1,0 +1,98 @@
+# Vendor facets — StackPath. DISCONTINUED. StackPath left the CDN business in 2023 (Akamai took
+# about 100 enterprise contracts, StackPath CDN and Highwinds CDN shut down) and ceased all
+# operations in June 2024. No live product exists to map: no maps.
+vendor: stackpath
+name: StackPath
+website: https://www.stackpath.com
+areas:
+- cdn
+registry_keys: []
+rubric_schema_version: 0.22.0
+generated: '2026-09-25'
+features_refreshed: '2026-09-25'
+basis: capability
+summary: >-
+  StackPath's CDN no longer exists. It exited the CDN business in August 2023, when Akamai acquired select
+  enterprise customer contracts but not its technology. The company then liquidated and ceased all operations,
+  announced June 2024. Nothing here can move a Kin Score. A catalog provider still showing a StackPath
+  CDN signal is carrying a stale detection, not a live vendor relationship.
+features:
+- id: cdn-discontinued
+  name: StackPath CDN (discontinued)
+  description: >-
+    The former edge CDN. StackPath exited CDN operations in 2023 and Akamai bought select enterprise customer
+    contracts, without the technology.
+  source: https://www.akamai.com/newsroom/press-release/akamai-acquires-stackpath-cdn-customers
+  tier: unknown
+- id: company-shutdown
+  name: All StackPath services ceased (June 2024)
+  description: >-
+    Edge compute, DNS, object storage, transit and colocation services were closed and the assets liquidated.
+  source: https://hostingjournalist.com/news/stackpath-shuts-down-operations-liquidates-its-assets
+  tier: unknown
+maps: []
+earns_nothing:
+- feature: cdn-discontinued
+  check: servers_resolvable
+  layer: composite
+  why: A discontinued CDN earns nothing, and even when live, delivery changed nothing any check reads.
+out_of_reach:
+  checks:
+  - consent_identity
+  - agentic_commerce
+  - well_known_published
+  - llms_txt_published
+  - mcp_server
+  note: No live product.
+surface:
+  agent_readiness:
+    reachable: 0
+    total: 139
+hard_rule: >-
+  A model, not a score. Adopting this vendor changes a provider's Kin Score only when the provider publishes
+  the resulting artifacts on its own surface; nothing here writes a score, and no sponsorship or partnership
+  can.
+method: searched
+source:
+- https://hostingjournalist.com/news/stackpath-shuts-down-operations-liquidates-its-assets
+- https://www.akamai.com/newsroom/press-release/akamai-acquires-stackpath-cdn-customers
+measured:
+  cohort:
+    method: vendors-catalog.json detections (CNAME / header / URL shape / markup), never a name match
+    detected: 0
+    in_baseline: 0
+  control:
+    basis: providers earning contract_present + documentation_present + api_reference_present, minus the
+      cohort
+    n: 5216
+  metric: >-
+    cohort_pct / control_pct = mean share of the check's points earned (derived and platform credit weighted),
+    x100
+  measured_on: '2026-09-25'
+  status: 'not measurable: 0 detected customers clear the baseline (need 20)'
+simulation:
+  simulated_on: '2026-09-25'
+  rubric: 0.23.0
+  population: providers publishing a contract (contract_present earned), replayable exactly
+  providers: 8977
+  providers_unreplayable: 987
+  providers_moved: 0
+  conditional_rows: excluded (they depend on what the API already does)
+  composite_lift:
+    median: 0.0
+    p75: 0.0
+    p90: 0.0
+    max: 0.0
+    mean_among_movers: 0.0
+  agent_readiness_lift:
+    median: 0.0
+    p75: 0.0
+    p90: 0.0
+    max: 0.0
+    mean_among_movers: 0.0
+  facet_lift_median_among_movers: {}
+  composite_band_moves: {}
+  agent_readiness_band_moves: {}
+  method: >-
+    each provider's own kin/checks file, the vendor's maps at their stated credit, the scorer's composite
+    formula; from -> to, nothing written
